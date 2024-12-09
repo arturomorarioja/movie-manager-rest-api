@@ -4,16 +4,13 @@
 ## Purpose
 This is a sample REST API for students of the elective subject Web Application Development in the Professional Bachelor Degree in Software Development at KEA (Københavns Erhvervsakademi / Copenhagen School of Design and Technology). The API is a movie manager where the user can get, browse, search, add, modify, and delete names of movies.
 
-## Tools
-PHP8 / MySQL
-
 ## API Documentation
 
-####Main usage:
+#### Main usage:
 
-http://_<server_name>_/kea-movie-manager-rest-api/_<end_point>_
+http://_<server_name>_/kea-movie-manager-rest-api/_<endpoint>_
 
-####Endpoints:
+#### Endpoints:
 
 | Method | Usage        | Description                         |
 | ------ |:------------ |:----------------------------------- |
@@ -25,7 +22,8 @@ http://_<server_name>_/kea-movie-manager-rest-api/_<end_point>_
 | PUT    |/movies/_<movie_id>_ | Updates the name of the movie with ID _<movie_id>_ |
 | DELETE    |/movies/_<movie_id>_ | Deletes the movie with ID _<movie_id>_ |
 
-####Examples:
+#### Examples:
+For the examples below, the API is assumed to run at `http://localhost/kea-movie-manager-rest-api`.
 
 GET http://localhost/kea-movie-manager-rest-api/
 GET http://localhost/kea-movie-manager-rest-api/movies
@@ -35,7 +33,7 @@ POST http://localhost/kea-movie-manager-rest-api/movies
 PUT http://localhost/kea-movie-manager-rest-api/movies/27
 DELETE http://localhost/kea-movie-manager-rest-api/movies/27
 
-####Sample Output:
+#### Sample Output:
 
 ```json
 {
@@ -75,5 +73,8 @@ DELETE http://localhost/kea-movie-manager-rest-api/movies/27
 }
 ```
 
-####Author:
+## Tools
+PHP8 / MySQL
+
+## Author:
 Arturo Mora-Rioja (amri@kea.dk)
