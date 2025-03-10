@@ -13,7 +13,7 @@
  *              Return values amended
  */
 
-require_once 'db.php';
+require_once __DIR__ . '/DB.php';
 
 class Movie extends DB
 {
@@ -25,7 +25,7 @@ class Movie extends DB
      * Returns a formatted error message
      * 
      * @param The message associated with the error
-     * @return an associative array with the corresponding error message
+     * @return array an associative array with the corresponding error message
      */
     private function setError(string $errorMessage): array
     {
@@ -36,7 +36,7 @@ class Movie extends DB
     /**
      * Retrieves information of all the movies
      * 
-     * @return  the total number of movies and all movie fields (ID, movie name) for each movie ordered by movie name
+     * @return array the total number of movies and all movie fields (ID, movie name) for each movie ordered by movie name
      */
     public function list(): array
     {
@@ -68,8 +68,8 @@ class Movie extends DB
     /**
      * Retrieves the movies whose name matches a certain text
      * 
-     * @param   text upon which to execute the search
-     * @return  the total number of movies matching the search plus matching movie fields (ID, movie name) for each movie
+     * @param  text upon which to execute the search
+     * @return array the total number of movies matching the search plus matching movie fields (ID, movie name) for each movie
      *          ordered by movie name
      */
     public function search(string $searchText): array 
@@ -103,8 +103,8 @@ class Movie extends DB
     /**
      * Retrieves the ID and name of a movie based on its ID
      * 
-     * @param   ID of the movie to find
-     * @return  number of movies returned (0 or 1) and ID and name of the matching movie, if it exists
+     * @param  ID of the movie to find
+     * @return array number of movies returned (0 or 1) and ID and name of the matching movie, if it exists
      */
     public function get(int $movieID): array
     {
@@ -137,8 +137,8 @@ class Movie extends DB
     /**
      * Inserts a new movie
      * 
-     * @param name of the new movie
-     * @return an associative array with the new movie ID
+     * @param  name of the new movie
+     * @return array an associative array with the new movie ID
      *      or with error information if there was an error
      */
     public function add(string $movieName): array 
@@ -174,7 +174,7 @@ class Movie extends DB
      * 
      * @param id of the movie to update
      * @param new name of the movie
-     * @return an associative array with the updated movie ID
+     * @return array an associative array with the updated movie ID
      *      or with error information if there was an error
      */
     public function update(int $movieID, string $movieName): array 
@@ -208,7 +208,7 @@ class Movie extends DB
      * Deletes a movie
      * 
      * @param id of the movie to delete
-     * @return an associative array with the deleted movie ID
+     * @return array an associative array with the deleted movie ID
      *      or with error information if there was an error
      */
     public function delete(int $movieID): array 

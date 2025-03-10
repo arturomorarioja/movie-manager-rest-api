@@ -8,9 +8,9 @@
  *          1.0.2 December 2024   Adapted to PHP8 and PSR
  */
 
-require_once 'db-config.php';
+require_once __DIR__ . '/DBConfig.php';
 
-class DB extends DBConfig
+Class DB extends DBConfig
 {
     // Since typed properties cannot be set to null in PHP8,
     // but it is necessary to set $pdo to null to disconnect,
@@ -20,9 +20,9 @@ class DB extends DBConfig
     /**
      * Opens a connection to the database
      * 
-     * @return true if successful, false otherwise
+     * @return bool true if successful, false otherwise
      */
-    public function connect(): int 
+    public function connect(): bool
     {
         $dsn = 'mysql:host=' . DB::DB_HOST . ';dbname=' . DB::DB_NAME . ';charset=utf8';
         $options = [
