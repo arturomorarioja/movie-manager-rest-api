@@ -2,6 +2,8 @@
 
 Class Utils
 {
+    private const ENTITY_MOVIES = 'movies';
+
     /**
      * Returns the REST API description
      */
@@ -27,28 +29,28 @@ Class Utils
         }
         $apiInfo['_links'] = array(
             array(
-                'rel' => ($entity === ENTITY_MOVIES ? 'self' : ENTITY_MOVIES),
-                'href' => $curDir . ENTITY_MOVIES . '{?s=}',
+                'rel' => ($entity === self::ENTITY_MOVIES ? 'self' : self::ENTITY_MOVIES),
+                'href' => $curDir . self::ENTITY_MOVIES . '{?s=}',
                 'type' => 'GET'
             ),
             array(
-                'rel' => ($entity === ENTITY_MOVIES ? 'self' : ENTITY_MOVIES),
-                'href' => $curDir . ENTITY_MOVIES . '/{id}',
+                'rel' => ($entity === self::ENTITY_MOVIES ? 'self' : self::ENTITY_MOVIES),
+                'href' => $curDir . self::ENTITY_MOVIES . '/{id}',
                 'type' => 'GET'
             ),
             array(
-                'rel' => ($entity === ENTITY_MOVIES ? 'self' : ENTITY_MOVIES),
-                'href' => $curDir . ENTITY_MOVIES,
+                'rel' => ($entity === self::ENTITY_MOVIES ? 'self' : self::ENTITY_MOVIES),
+                'href' => $curDir . self::ENTITY_MOVIES,
                 'type' => 'POST'
             ),
             array(
-                'rel' => ($entity === ENTITY_MOVIES ? 'self' : ENTITY_MOVIES),
-                'href' => $curDir . ENTITY_MOVIES . '/{id}',
+                'rel' => ($entity === self::ENTITY_MOVIES ? 'self' : self::ENTITY_MOVIES),
+                'href' => $curDir . self::ENTITY_MOVIES . '/{id}',
                 'type' => 'PUT'
             ),
             array(
-                'rel' => ($entity === ENTITY_MOVIES ? 'self' : ENTITY_MOVIES),
-                'href' => $curDir . ENTITY_MOVIES . '/{id}',
+                'rel' => ($entity === self::ENTITY_MOVIES ? 'self' : self::ENTITY_MOVIES),
+                'href' => $curDir . self::ENTITY_MOVIES . '/{id}',
                 'type' => 'DELETE'
             )
         );        
