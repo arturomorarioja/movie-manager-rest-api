@@ -1,14 +1,14 @@
-# KEA.dk - REST API Example
+# REST API Example
 # Movie Manager
 
 ## Purpose
-This is a sample REST API for students of the elective subject Web Application Development in the Professional Bachelor Degree in Software Development at KEA (Københavns Erhvervsakademi / Copenhagen School of Design and Technology). The API is a movie manager where the user can get, browse, search, add, modify, and delete names of movies.
+This is a sample REST API. The API is a movie manager where the user can get, browse, search, add, modify, and delete names of movies.
 
 ## API Documentation
 
 #### Main usage:
 
-http://_<server_name>_/kea-movie-manager-rest-api/_<endpoint>_
+http://_<server_name>_/movie-manager-rest-api/_<endpoint>_
 
 #### Endpoints:
 
@@ -23,15 +23,15 @@ http://_<server_name>_/kea-movie-manager-rest-api/_<endpoint>_
 | DELETE    |/movies/_<movie_id>_ | Deletes the movie with ID _<movie_id>_ |
 
 #### Examples:
-For the examples below, the API is assumed to run at `http://localhost/kea-movie-manager-rest-api`.
+For the examples below, the API is assumed to run at `http://localhost/movie-manager-rest-api`.
 
-GET http://localhost/kea-movie-manager-rest-api/
-GET http://localhost/kea-movie-manager-rest-api/movies
-GET http://localhost/kea-movie-manager-rest-api/movies?name=Star
-GET http://localhost/kea-movie-manager-rest-api/movies/4
-POST http://localhost/kea-movie-manager-rest-api/movies
-PUT http://localhost/kea-movie-manager-rest-api/movies/27
-DELETE http://localhost/kea-movie-manager-rest-api/movies/27
+GET http://localhost/movie-manager-rest-api/
+GET http://localhost/movie-manager-rest-api/movies
+GET http://localhost/movie-manager-rest-api/movies?name=Star
+GET http://localhost/movie-manager-rest-api/movies/4
+POST http://localhost/movie-manager-rest-api/movies
+PUT http://localhost/movie-manager-rest-api/movies/27
+DELETE http://localhost/movie-manager-rest-api/movies/27
 
 #### Sample Output:
 
@@ -46,27 +46,27 @@ DELETE http://localhost/kea-movie-manager-rest-api/movies/27
     "_links": [
         {
             "rel": "movies",
-            "href": "<server_path>/kea-movie-manager-rest-api/movies{?name=}",
+            "href": "<server_path>/movie-manager-rest-api/movies{?name=}",
             "type": "GET"
         },
         {
             "rel": "movies",
-            "href": "<server_path>/kea-movie-manager-rest-api/movies/{id}",
+            "href": "<server_path>/movie-manager-rest-api/movies/{id}",
             "type": "GET"
         },
         {
             "rel": "movies",
-            "href": "<server_path>/kea-movie-manager-rest-api/movies",
+            "href": "<server_path>/movie-manager-rest-api/movies",
             "type": "POST"
         },
         {
             "rel": "movies",
-            "href": "<server_path>/kea-movie-manager-rest-api/movies/{id}",
+            "href": "<server_path>/movie-manager-rest-api/movies/{id}",
             "type": "PUT"
         },
         {
             "rel": "movies",
-            "href": "<server_path>/kea-movie-manager-rest-api/movies{?name=}",
+            "href": "<server_path>/movie-manager-rest-api/movies{?name=}",
             "type": "DELETE"
         }
     ]
@@ -77,4 +77,4 @@ DELETE http://localhost/kea-movie-manager-rest-api/movies/27
 PHP8 / MySQL
 
 ## Author:
-Arturo Mora-Rioja (amri@kea.dk)
+Arturo Mora-Rioja
