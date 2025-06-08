@@ -1,6 +1,6 @@
 <?php
 /**
- * KEA Movie Manager REST API
+ * Movie Manager REST API
  * Refer to README.md for API documentation
  * 
  * @author  Arturo Mora-Rioja
